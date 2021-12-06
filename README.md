@@ -1,31 +1,31 @@
 # MLOps-Basics
 
- > There is nothing magic about magic. The magician merely understands something simple which doesn’t appear to be simple or natural to the untrained audience. Once you learn how to hold a card while making your hand look empty, you only need practice before you, too, can “do magic.” – Jeffrey Friedl in the book Mastering Regular Expressions
+ > There is nothing magic about magic. The magician merely understands something simple which doesn’t appear to be simple or natural to the untrained audience. Once you learn how to hold a card while making your hand look empty, you only need practice before you, too, can “do magic.” – Jeffrey Friedl, 서적 Mastering Regular Expressions
 
-**Note: Please raise an issue for any suggestions, corrections, and feedback.**
+**Note: 제안, 수정 또는 피드백이 있는 경우 Issue를 올려주세요.**
 
-The goal of the series is to understand the basics of MLOps like model building, monitoring, configurations, testing, packaging, deployment, cicd, etc.
+MLOps-Basics 시리즈의 목표는 모델의 `구축(building)`, `모니터링(monitoring)`, `구성(configurations)`, `테스트(testing)`, `패키징(packaging)`, `배포(deployment)`, `CI/CD`와 같은 MLOps의 기본을 이해하는 것입니다.
 
 ![pl](images/summary.png)
 
-## Week 0: Project Setup
+## 0주차: Project 준비
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=easy&color=green"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-project-setup-part1)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-project-setup-part1)를 참고해주세요.
 
-The project I have implemented is a simple classification problem. The scope of this week is to understand the following topics:
+이 프로젝트에서는 간단한 classification 문제를 다루고 있습니다. 이번 주차는 아래의 질문에 답할 수 있는 범위를 다루게 됩니다:
 
-- `How to get the data?`
-- `How to process the data?`
-- `How to define dataloaders?`
-- `How to declare the model?`
-- `How to train the model?`
-- `How to do the inference?`
+- `데이터는 어떻게 구할까?`
+- `데이터를 어떻게 처리해야 할끼?`
+- `데이터 로더(dataloader)를 어떻게 정의 해야 할까?`
+- `모델은 어떻게 정의할까?`
+- `모델을 어떻게 학습할까?`
+- `추론은 어떻게 해야하나?`
 
 ![pl](images/pl.jpeg)
 
-Following tech stack is used:
+이 프로젝트를 위해서 아래의 내용을(tech stack))숙지하고 있어야 합니다:
 
 - [Huggingface Datasets](https://github.com/huggingface/datasets)
 - [Huggingface Transformers](https://github.com/huggingface/transformers)
@@ -35,7 +35,7 @@ Following tech stack is used:
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=easy&color=green"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-wandb-integration)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-wandb-integration)를 참고해주세요.   
 
 Tracking all the experiments like tweaking hyper-parameters, trying different models to test their performance and seeing the connection between model and the input data will help in developing a better model.
 
