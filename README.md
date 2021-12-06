@@ -1,4 +1,4 @@
-# MLOps-Basics
+# MLOps-기본
 
  > There is nothing magic about magic. The magician merely understands something simple which doesn’t appear to be simple or natural to the untrained audience. Once you learn how to hold a card while making your hand look empty, you only need practice before you, too, can “do magic.” – Jeffrey Friedl, 서적 Mastering Regular Expressions
 
@@ -14,7 +14,7 @@ MLOps-Basics 시리즈의 목표는 모델의 `구축(building)`, `모니터링(
 
 자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-project-setup-part1)를 참고해주세요.
 
-이 프로젝트에서는 간단한 classification 문제를 다루고 있습니다. 이번 주차는 아래의 질문에 답할 수 있는 범위를 다루게 됩니다:
+이 프로젝트에서는 간단한 classification 문제를 다루고 있습니다. 이번 주차에서는 아래의 질문에 답할 수 있는 범위를 다루게 됩니다:
 
 - `데이터는 어떻게 구할까?`
 - `데이터를 어떻게 처리해야 할끼?`
@@ -25,30 +25,31 @@ MLOps-Basics 시리즈의 목표는 모델의 `구축(building)`, `모니터링(
 
 ![pl](images/pl.jpeg)
 
-이 프로젝트를 위해서 아래의 내용을(tech stack))숙지하고 있어야 합니다:
+이 프로젝트를 위해서 아래의 내용을(tech stack)숙지하고 있어야 합니다:
 
 - [Huggingface Datasets](https://github.com/huggingface/datasets)
 - [Huggingface Transformers](https://github.com/huggingface/transformers)
 - [Pytorch Lightning](https://pytorch-lightning.readthedocs.io/)
 
-## Week 1: Model monitoring - Weights and Biases
+
+## 1주차: 모델 모니터링 - 가중치(Weights)와 바이어스(Biases)
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=easy&color=green"/>
 
 자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-wandb-integration)를 참고해주세요.   
 
-Tracking all the experiments like tweaking hyper-parameters, trying different models to test their performance and seeing the connection between model and the input data will help in developing a better model.
+하이퍼 파라미터(hyper-parameters)를 수정하고 성능 테스트를 위해서 다른 모델을 사용하는 것 그리고 모델과 입력 데이터의 관계를 살펴보는 것과 같이 모든 상황을 추적하는 것은 더 나은 모델을 설계할 수 있도록 합니다.
 
-The scope of this week is to understand the following topics:
+이번 주차에서는 아래의 질문에 답할 수 있는 범위를 다루게 됩니다:
 
-- `How to configure basic logging with W&B?`
-- `How to compute metrics and log them in W&B?`
-- `How to add plots in W&B?`
-- `How to add data samples to W&B?`
+- `가중치(W)와 바이어스(B)로 기본적인 로깅(logging)을 어떻게 구성할까?`
+- `어떻게 매트릭스를 연산하고 W와 B로서 기록할 수 있을까?`
+- `W와 B를 어떻게 그래프로 나타낼 수 있을까?`
+- `어떻게 데이터를 W와 B에 녹여낼 수 있을까?`
 
 ![wannb](images/wandb.png)
 
-Following tech stack is used:
+이 프로젝트를 위해서 아래의 내용을(tech stack)숙지하고 있어야 합니다:
 
 - [Weights and Biases](https://wandb.ai/site)
 - [torchmetrics](https://torchmetrics.readthedocs.io/)
@@ -56,35 +57,33 @@ Following tech stack is used:
 References:
 
 - [Tutorial on Pytorch Lightning + Weights & Bias](https://www.youtube.com/watch?v=hUXQm46TAKc)
-
 - [WandB Documentation](https://docs.wandb.ai/)
 
-## Week 2: Configurations - Hydra
+## 2주차: 구성(Configurations) - Hydra
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=easy&color=green"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-hydra-config)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-hydra-config)를 참고해주세요.   
 
-Configuration management is a necessary for managing complex software systems. Lack of configuration management can cause serious problems with reliability, uptime, and the ability to scale a system.
+구성 관리(Configuration management)는 복잡한 소프트웨어 시스템을 관리하는 데 필요합니다. Configuration management가 부족하면 안정성, 가동 시간, 시스템 확장 기능에 심각한 문제가 발생할 수 있습니다.
 
-The scope of this week is to understand the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-- `Basics of Hydra`
-- `Overridding configurations`
-- `Splitting configuration across multiple files`
-- `Variable Interpolation`
-- `How to run model with different parameter combinations?`
+- `Hydra의 기본`
+- `구성의 재정의(Overridding configurations)`
+- `다양한 파일에 configuration을 분할하는 방법`
+- `변수 인터폴레이션(Variable Interpolation)`
+- `다른 파라미터 조합으로 어떻게 모델을 학슬할까?`
 
 ![hydra](images/hydra.png)
 
-Following tech stack is used:
+이 프로젝트를 위해서 아래의 내용을(tech stack)숙지하고 있어야 합니다:
 
 - [Hydra](https://hydra.cc/)
 
 References
 
 - [Hydra Documentation](https://hydra.cc/docs/intro)
-
 - [Simone Tutorial on Hydra](https://www.sscardapane.it/tutorials/hydra-tutorial/#executing-multiple-runs)
 
 
@@ -92,56 +91,55 @@ References
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=easy&color=green"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-dvc)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-dvc)를 참고해주세요.
 
-Classical code version control systems are not designed to handle large files, which make cloning and storing the history impractical. Which are very common in Machine Learning.
+전형적인 버전 컨트롤 시스템은 큰 파일들을 다룰 수 있도록 설계되어 있지 않습니다. 따라서 이러한 시스템은 기록을 복제하고 저장하는 것을 실용적이지 못하게 만듭니다. 머신러닝에서는 이러한 일이 다반사 입니다.
 
-The scope of this week is to understand the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-- `Basics of DVC`
-- `Initialising DVC`
-- `Configuring Remote Storage`
-- `Saving Model to the Remote Storage`
-- `Versioning the models`
+- `DVC의 기본`
+- `DVC 초기화`
+- `리모트 저장소를 구성하는 방법`
+- `리모트 저장소에 모델을 저장하는 방법`
+- `모델의 버전 관리`
 
 ![dvc](images/dvc.png)
 
-Following tech stack is used:
+이 프로젝트를 위해서 아래의 내용을(tech stack)숙지하고 있어야 합니다:
 
 - [DVC](https://dvc.org/)
 
 References
 
 - [DVC Documentation](https://dvc.org/doc)
-
 - [DVC Tutorial on Versioning data](https://www.youtube.com/watch?v=kLKBcPonMYw)
 
-## Week 4: Model Packaging - ONNX
+## 4주차: 모델 패킹(packing) - ONNX
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=medium&color=orange"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-onnx)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-onnx)를 참고해주세요.
 
-Why do we need model packaging? Models can be built using any machine learning framework available out there (sklearn, tensorflow, pytorch, etc.). We might want to deploy models in different environments like (mobile, web, raspberry pi) or want to run in a different framework (trained in pytorch, inference in tensorflow).
-A common file format to enable AI developers to use models with a variety of frameworks, tools, runtimes, and compilers will help a lot.
+왜 모델 패킹이 필요할까요? 모델은 다양한 머신러닝 프레임워크(sklearn, tensorflow, pytorch, 기타 등등)를 통해서 만들어 질 수 있습니다. 이러한 모델들을 모바일, 웹, 라즈베리파이와 같은 다양한 환경에 배포하고 싶고 파이토치로 학습하고 텐서플로우로 추론하는 것과 같이 다양한 프레임워크를 이용하고 싶을 수도 있습니다.   
+이처럼 AI 개발자가 다양한 프레임워크, 도구, 런타임 및 컴파일러와 함께 모델을 사용할 수 있도록 하는 공통 파일 포멧은 많은 도움이 될 수 있습니다.
 
-This is acheived by a community project `ONNX`.
+커뮤니티 프로젝트인 `ONNX`를 이용하면 앞서 언급한 목적들을 달성할 수 있습니다.
 
-The scope of this week is to understand the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-- `What is ONNX?`
+- `ONNX란?`
 
-- `How to convert a trained model to ONNX format?`
+- `학습된 모델을 ONNX 포멧으로 어떻게 변환할까?`
 
-- `What is ONNX Runtime?`
+- `ONNX Runtime이란?`
 
-- `How to run ONNX converted model in ONNX Runtime?`
+- `변환된 ONNX 모델을 ONNX Runtime에서 구동하는 방법은?`
 
-- `Comparisions`
+- `비교`
 
 ![ONNX](images/onnx.jpeg)
 
-Following tech stack is used:
+이 프로젝트를 위해서 아래의 내용을(tech stack)숙지하고 있어야 합니다:
 
 - [ONNX](https://onnx.ai/)
 - [ONNXRuntime](https://www.onnxruntime.ai/)
@@ -154,27 +152,26 @@ References
 - [Piotr Blog on onnx conversion](https://tugot17.github.io/data-science-blog/onnx/tutorial/2020/09/21/Exporting-lightning-model-to-onnx.html)
 
 
-## Week 5: Model Packaging - Docker
+## 5주차: 모델 패킹(packaging) - 도커(docker)
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=easy&color=green"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-docker)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-docker)를 참고해주세요.
 
-Why do we need packaging? We might have to share our application with others, and when they try to run the application most of the time it doesn’t run due to dependencies issues / OS related issues and for that, we say (famous quote across engineers) that `It works on my laptop/system`.
+모델 패킹이 왜 필요할까요? 어플리케이션을 다른 누군가에게 공유해줘야 할 수도 있고, 이러한 경우 많은 상황에서 어플리케이션은 의존성 문제나 OS관련 문제로 돌아가지 않습니다. 그래서 많은 경우 다음과 같은 말을 남겨둡니다. `이 프로젝트는 내 OO랩탑, OO시스템에서 테스트 되었습니다.`
 
-So for others to run the applications they have to set up the same environment as it was run on the host side which means a lot of manual configuration and installation of components.
+따라서 어플리케이션을 실행하기 위해서는 실제 동작했던 환경과 동일한 환경을 구성해야 합니다. 결국 동일한 환경을 구성하기 위해서는 수동으로 많은 것들을 설정 해야하고 많은 컴포넌트를 설치해야 합니다. (가끔은 이러한 환경 문제가 더 안풀리기도 하죠ㅠ)
 
-The solution to these limitations is a technology called Containers.
+이러한 한계를 극복할 수 있는 방법을 컨테이너(Containers)기술 이라고 합니다.
 
-By containerizing/packaging the application, we can run the application on any cloud platform to get advantages of managed services and autoscaling and reliability, and many more.
+어플리케이션을 컨테이너화/패키징 함으로써 어떠한 클라우드 플랫폼에서도 어플리케이션을 실행할 수 있고 관리형 서비스(managed services), 오토스케일링(autoscaling), 안정성과 같은 다양한 이점을 얻을 수 있습니다.
+이러한 작업을 위해서 가장 많이 찾는 툴이 바로 Docker🛳 입니다. 
 
-The most prominent tool to do the packaging of application is Docker 🛳
-
-The scope of this week is to understand the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
 - `FastAPI wrapper`
-- `Basics of Docker`
-- `Building Docker Container`
+- `Docker 기본`
+- `Docker Container 빌드하기`
 - `Docker Compose`
 
 ![Docker](images/docker_flow.png)
