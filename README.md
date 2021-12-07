@@ -2,7 +2,9 @@
 
  > There is nothing magic about magic. The magician merely understands something simple which doesn’t appear to be simple or natural to the untrained audience. Once you learn how to hold a card while making your hand look empty, you only need practice before you, too, can “do magic.” – Jeffrey Friedl, 서적 Mastering Regular Expressions
 
-**Note: 제안, 수정 또는 피드백이 있는 경우 Issue를 올려주세요.**
+**Note: 제안, 수정 또는 피드백이 있는 경우 Issue를 올려주세요.**   
+
+- *개인적으로 리포를 번역했습니다. 오역이 있을 수도 있으니 `main` branch나 [원본 리포](https://github.com/graviraja/MLOps-Basics)를 참고해주세요.*
 
 MLOps-Basics 시리즈의 목표는 모델의 `구축(building)`, `모니터링(monitoring)`, `구성(configurations)`, `테스트(testing)`, `패키징(packaging)`, `배포(deployment)`, `CI/CD`와 같은 MLOps의 기본을 이해하는 것입니다.
 
@@ -160,7 +162,7 @@ References
 
 모델 패킹이 왜 필요할까요? 어플리케이션을 다른 누군가에게 공유해줘야 할 수도 있고, 이러한 경우 많은 상황에서 어플리케이션은 의존성 문제나 OS관련 문제로 돌아가지 않습니다. 그래서 많은 경우 다음과 같은 말을 남겨둡니다. `이 프로젝트는 내 OO랩탑, OO시스템에서 테스트 되었습니다.`
 
-따라서 어플리케이션을 실행하기 위해서는 실제 동작했던 환경과 동일한 환경을 구성해야 합니다. 결국 동일한 환경을 구성하기 위해서는 수동으로 많은 것들을 설정 해야하고 많은 컴포넌트를 설치해야 합니다. (가끔은 이러한 환경 문제가 더 안풀리기도 하죠ㅠ)
+따라서 어플리케이션을 실행하기 위해서는 실제 동작했던 환경과 동일한 환경을 구성해야 합니다. 결국 동일한 환경을 구성하기 위해서는 수동으로 많은 것들을 설정 해야하고 많은 컴포넌트를 설치해야 합니다(가끔은 이러한 환경 문제가 더 안풀리기도 하죠ㅠ).
 
 이러한 한계를 극복할 수 있는 방법을 컨테이너(Containers)기술 이라고 합니다.
 
@@ -181,117 +183,101 @@ References
 - [Analytics vidhya blog](https://www.analyticsvidhya.com/blog/2021/06/a-hands-on-guide-to-containerized-your-machine-learning-workflow-with-docker/)
 
 
-## Week 6: CI/CD - GitHub Actions
+## 6주차: CI/CD - GitHub Actions
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=medium&color=orange"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-github-actions)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-github-actions)를 참고해주세요.
 
-CI/CD is a coding philosophy and set of practices with which you can continuously build, test, and deploy iterative code changes.
+CI(Continuous Integration)/CD(Continuous Delivery)는 반복적인 코드의 변화를 지속적으로 빌드, 테스트, 배포할 수 있는 일련의 과정을 말합니다.
 
-This iterative process helps reduce the chance that you develop new code based on a buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.
+이러한 반복적인 프로세스는 버그로 가득찬 코드나 잘못된 이전 버전으로부터 새로운 코드를 개발하는 것을 방지하는데 도움을 줄 수 있습니다. 또한 이 방법은 개발에서 배포에 이르기까지 사람이 직접 작업하는 과정을 줄이거나 없도록 노력합니다.
 
-In this post, I will be going through the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-- Basics of GitHub Actions
-- First GitHub Action
-- Creating Google Service Account
-- Giving access to Service account
-- Configuring DVC to use Google Service account
-- Configuring Github Action
+  `GitHub Actions 기본`
+- `첫번째 GitHub Action`
+- `Google Service Account 생성`
+- `Service account 엑세스 권한 부여`
+- `Google Service account를 사용하기 위한 DVC 설정`
+- `Github Action 설정`
 
 ![Docker](images/basic_flow.png)
 
 References
 
 - [Configuring service account](https://dvc.org/doc/user-guide/setup-google-drive-remote)
-
 - [Github actions](https://docs.github.com/en/actions/quickstart)
 
 
-## Week 7: Container Registry - AWS ECR
+## 7주차: Container Registry - AWS ECR
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=medium&color=orange"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-container-registry)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-container-registry)를 참고해주세요.
 
-A container registry is a place to store container images. A container image is a file comprised of multiple layers which can execute applications in a single instance. Hosting all the images in one stored location allows users to commit, identify and pull images when needed.
+컨테이너 레지스트리(container registry)는 컨테이너 이미지를 보관하기 위한 저장소 입니다. 컨테이너 이미지는 어플리케이션을 하나의 인스턴스에서 구동하기 위해서 여러 레이어로 이루어진 파일입니다. 동일한 저장소 위치에서 모든 이미지를 관리하면 사용자가 필요할때 커밋(commit)이나 풀(pull)할 수 있으며 이미지를 식별할 수도 있습니다.
 
-Amazon Simple Storage Service (S3) is a storage for the internet. It is designed for large-capacity, low-cost storage provision across multiple geographical regions.
+Amazon Simple Storage Service (S3)는 인터넷을 이용하는 클라우드 스토리지 서비스 입니다. 이 서비스는 여러 지역에 걸쳐서 대용량의 저비용 스토리지 프로비저닝을 위해서 설계되어 있습니다.
 
-In this week, I will be going through the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-- `Basics of S3`
-
-- `Programmatic access to S3`
-
-- `Configuring AWS S3 as remote storage in DVC`
-
-- `Basics of ECR`
-
-- `Configuring GitHub Actions to use S3, ECR`
+- `S3 기본`
+- `프로그래밍 방식으로 S3에 접근하는 방법`
+- `AWS S3를 DVC에서 원격 저장소로 구성하는 방법`
+- `ECR 기본`
+- `GitHub Actions에서 S3, ECR을 사용하도록 설정하는 방법`
 
 ![Docker](images/ecr_flow.png)
 
 
-## Week 8: Serverless Deployment - AWS Lambda
+## 8주차: 서버리스(Serverless) 배포 - AWS Lambda
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=medium&color=orange"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-serverless)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-serverless)를 참고해주세요.
 
-A serverless architecture is a way to build and run applications and services without having to manage infrastructure. The application still runs on servers, but all the server management is done by third party service (AWS). We no longer have to provision, scale, and maintain servers to run the applications. By using a serverless architecture, developers can focus on their core product instead of worrying about managing and operating servers or runtimes, either in the cloud or on-premises.
+서버리스 아키텍처는 인프라를 별도로 관리하지 않아도 어플리케이션과 서비스를 구축하고 실행할 수 있습니다. 어플리케이션은 서버에서 돌아가지만 모든 서버의 관리는 AWS와 같은 서드 파티 서버 관리자에 의해서 이루어집니다. 어플리케이션을 유지보수 하기 위해서 프로비저닝, 스케일링 및 서버관리가 필요하지 않습니다(serverless). 서버리스 아키텍처를 사용하므로써 개발자는 핵심 프로덕트에 더 집중할 수 있고 클라우드(cloud)나 온프레미스(on-premises)의 관리, 동작에 신경쓰지 않아도 됩니다.   
 
-In this week, I will be going through the following topics:
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-- `Basics of Serverless`
-
-- `Basics of AWS Lambda`
-
+- `Serverless 기본`
+- `AWS Lambda 기본`
 - `Triggering Lambda with API Gateway`
-
-- `Deploying Container using Lambda`
-
-- `Automating deployment to Lambda using Github Actions`
+- `Lambda를 이용한 Container 배포`
+- `Github Actions을 이용한 Lambda 자동 배포`
 
 ![Docker](images/lambda_flow.png)
 
 
-## Week 9: Prediction Monitoring - Kibana
+## 9주차: 예측 모니터링 - Kibana
 
 <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=difficulty&message=medium&color=orange"/>
 
-Refer to the [Blog Post here](https://www.ravirajag.dev/blog/mlops-monitoring)
+자세한 내용은 [블로그 포스트](https://www.ravirajag.dev/blog/mlops-monitoring)를 참고해주세요.
 
 
-Monitoring systems can help give us confidence that our systems are running smoothly and, in the event of a system failure, can quickly provide appropriate context when diagnosing the root cause.
+시스템을 모니터링하면 시스템이 잘 돌아가고 있다는 것을 확신할 수 있고, 시스템에 오류가 발생하는 경우 근본 원인을 진단할때 적절한 컨텍스트(context)를 빠르게 제공할 수 있습니다.
 
-Things we want to monitor during and training and inference are different. During training we are concered about whether the loss is decreasing or not, whether the model is overfitting, etc.
+모델의 학습과 추론시에 우리가 모니터링 하고자 하는 것은 다릅니다. 학습 과정에서는 loss가 줄어드는지 확인해야 하고 과대적합(overfitting)과 같이 학습을 방해하는 요소들이 발생하지 않는지 고려해야 합니다. 
 
-But, during inference, We like to have confidence that our model is making correct predictions.
+하지만 모델의 추론시에는 모델의 출력이 정확한 출력을 하고 있는것인지 확실할 수 있어야 합니다.
 
-There are many reasons why a model can fail to make useful predictions:
+모델이 유용한 추론 결과를 도출하지 못하는 것은 다음과 같은 여러 이유가 있습니다:
 
-- The underlying data distribution has shifted over time and the model has gone stale. i.e inference data characteristics is different from the data characteristics used to train the model.
+- 시간이 흐르면서 데이터의 분포가 변화하고 사용한 모델이 너무 오래된 경우.
+- 학습에는 사용되지 않았던 데이터(edge cases)가 추론시에 이용되는 경우(이러한 경우 모델의 성능이 저하되거나 오류가 발생할 수 있습니다.).
+- 모델이 배포시에 설정이 잘못되는 경우(매우 빈번하게 일어납니다.).
 
-- The inference data stream contains edge cases (not seen during model training). In this scenarios model might perform poorly or can lead to errors.
+위와 같은 상황에서도 서비스 관점에서는 `성공적인` 예측을 한다고 볼 수 있습니다. 그러나 그 예측 결과는 의미가 없습니다. 머신러닝을 모니터링하면 이와 같은 상황들을 감지하고 관리하는데 도움이 될 수 있습니다(예를 들면 모니터링 결과에 따라서 모델을 재학습하고 배포하는 파이프라인을 가동할 수 있습니다.).
 
-- The model was misconfigured in its production deployment. (Configuration issues are common)
+이번 주차에서는 아래와 같은 범위를 다루게 됩니다:
 
-In all of these scenarios, the model could still make a `successful` prediction from a service perspective, but the predictions will likely not be useful. Monitoring machine learning models can help us detect such scenarios and intervene (e.g. trigger a model retraining/deployment pipeline).
-
-In this week, I will be going through the following topics:
-
-- `Basics of Cloudwatch Logs`
-
-- `Creating Elastic Search Cluster`
-
-- `Configuring Cloudwatch Logs with Elastic Search`
-
-- `Creating Index Patterns in Kibana`
-
-- `Creating Kibana Visualisations`
-
-- `Creating Kibana Dashboard`
+- `Cloudwatch Logs 기본`
+- `Elastic Search Cluster 생성`
+- `Elastic Search로 Cloudwatch Logs를 설정`
+- `Kibana에서 Index Patterns 생성`
+- `Kibana Visualisations 생성`
+- `Kibana Dashboard 생성`
 
 ![Docker](images/kibana_flow.png)
